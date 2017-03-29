@@ -13,7 +13,7 @@ public class Worker implements Runnable{
         synchronized (this) {
             System.out.println("producer thread is running....");
 
-            for (int i =0; i < 5;i++){
+            for (int i =0; i <= 5;i++){
                 System.out.println(i);
                 if(i == 3){
                     wait();
@@ -34,7 +34,7 @@ public class Worker implements Runnable{
             scanner.nextLine();
             System.out.println("key pressed");
             notify();
-        }
+    }
     }
 
     @Override
